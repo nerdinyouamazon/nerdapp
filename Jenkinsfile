@@ -1,10 +1,15 @@
 pipeline{
   agent any
-  
+  environment {
+    git_url=https://github.com/nerdinyouamazon/nerdapp
+    branch=main  
+      }
     stages {
-      stage ("build1"){
+      stage ("checkout"){
        steps {
-         echo 'in build'
+        git branch :$(branch),
+          url $(git_url)
+          sh 'date'
        }
       }
     }
