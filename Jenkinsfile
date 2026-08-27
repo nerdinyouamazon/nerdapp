@@ -7,8 +7,8 @@ pipeline{
     stages {
       stage ("checkout"){
        steps {
-        git branch :"$(git_branch)",
-          url "$(git_url)"
+        git branch :"${git_branch}",
+          url "${git_url}"
           sh 'date'
        }
       }
