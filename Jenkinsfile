@@ -1,8 +1,8 @@
 pipeline{
   agent any
   environment {
-    git_url=https://github.com/nerdinyouamazon/nerdapp
-    branch=main  
+    git_url='https://github.com/nerdinyouamazon/nerdapp'
+    branch='main'  
       }
     stages {
       stage ("checkout"){
