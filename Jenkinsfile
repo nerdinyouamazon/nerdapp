@@ -14,7 +14,7 @@ pipeline{
       }
       stage ("docker"){
         steps{
-            docker build -t sample:${BUILD_NUMBER} 
+            sh "docker build -t sample:${BUILD_NUMBER} ."
              
         }
       }
