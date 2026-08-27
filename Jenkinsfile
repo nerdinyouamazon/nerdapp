@@ -9,8 +9,14 @@ pipeline{
        steps {
           git branch:"${git_branch}",
           url: "${git_url}"
-          sh 'date'
+          
        }
+      }
+      stage ("docker"){
+        steps{
+            docker build -t sample:$(BUILD_NUMBER)
+             
+        }
       }
     }
   }
