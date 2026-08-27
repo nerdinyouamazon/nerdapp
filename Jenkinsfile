@@ -2,9 +2,9 @@ pipeline{
   agent any
   
     stages {
-      stage ("checkout"){
+      stage ("build"){
        steps {
-         echo 'in checkout'
+         echo 'in build'
        }
       }
     }
