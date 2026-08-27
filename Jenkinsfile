@@ -4,7 +4,7 @@ pipeline{
     stages{
       stage ("checkout")
        steps{
-         echo "in checkout"
+         echo 'in checkout'
        }
       
     }
