@@ -34,6 +34,28 @@ pipeline{
         }
       }
     }
+  post {
+
+    success {
+        emailext(
+            subject: "SUCCESS - ${JOB_NAME} #${BUILD_NUMBER}",
+            body: "Image pushed successfully.",
+            to: "nerdinyouamazon@gmail.com"
+        )
+    }
+
+    failure {
+        emailext(
+            subject: "FAILED - ${JOB_NAME} #${BUILD_NUMBER}",
+            body: "Pipeline failed. Check ${BUILD_URL}",
+            to: "nerdinyouamazon@gmail.com"
+        )
+    }
+
+    always {
+        echo 'Pipeline completed'
+    }
+}
   }
   
 
