@@ -12,9 +12,19 @@ pipeline{
           
        }
       }
-      stage ("docker"){
+      stage ("dockerLogin"){
         steps{
-            sh "docker build -t sample:${BUILD_NUMBER} ."
+             withcredentials{[
+                usernamePassword(
+                  credenyailsId: DHUB
+                  userameVariable: 'D_user'
+                  passwordVariable: 'D_pass'
+                )
+
+               
+             ]}
+         echo "${D_user}"
+          
              
         }
       }
