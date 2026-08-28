@@ -16,15 +16,15 @@ pipeline{
         steps{
              withCredentials([
                 usernamePassword(
-                  credenyailsId: DHUB,
+                  credentialsId: 'DHUB',
                   usernameVariable: 'D_user',
                   passwordVariable: 'D_pass'
                 )
 
                
-             ])
-         echo " ${D_user}"
-          
+             ]){
+         sh ' echo $D_user'
+             }
              
         }
       }
