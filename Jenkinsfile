@@ -14,7 +14,7 @@ pipeline{
       }
       stage ("dockerLogin"){
         steps{
-             withcredentials{[
+             withCredentials([
                 usernamePassword(
                   credenyailsId: DHUB,
                   usernameVariable: 'D_user',
@@ -22,7 +22,7 @@ pipeline{
                 )
 
                
-             ]}
+             ])
          echo " ${D_user}"
           
              
