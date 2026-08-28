@@ -23,7 +23,8 @@ pipeline{
 
                
              ]){
-         sh ' echo $D_user'
+               sh 'echo $D_pass|docker login -u $D_user --password-stdin'
+               sh ' docker push nerdinyou/sample:${BUILD_NUMBER} .
              }
              
         }
