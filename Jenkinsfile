@@ -17,7 +17,7 @@ pipeline{
              withcredentials{[
                 usernamePassword(
                   credenyailsId: DHUB
-                  userameVariable: 'D_user'
+                  usernameVariable: 'D_user'
                   passwordVariable: 'D_pass'
                 )
 
