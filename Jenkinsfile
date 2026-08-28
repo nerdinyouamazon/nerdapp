@@ -12,7 +12,7 @@ pipeline{
           
        }
       }
-      stage ("dockerLogin"){
+      stage ("dockerLogn"){
         steps{
              withCredentials([
                 usernamePassword(
