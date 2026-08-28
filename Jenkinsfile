@@ -23,7 +23,7 @@ pipeline{
 
                
              ]}
-         echo " usernmame - ${D_user}"
+         echo " ${D_user}"
           
              
         }
