@@ -25,7 +25,7 @@ pipeline{
              ]){
                sh 'echo $D_pass|docker login -u $D_user --password-stdin'
                sh ' docker build -t sample:${BUILD_NUMBER} .'
-               sh ' docker tag sample:${BUILD_NUMBER} nerdinyou/sample:{BUILD_NUMBER}
+               sh ' docker tag sample:${BUILD_NUMBER} nerdinyou/sample:${BUILD_NUMBER}
                sh ' docker push nerdinyou/sample:${BUILD_NUMBER}'
              }
              
